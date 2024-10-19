@@ -1,0 +1,30 @@
+body {
+    background-color: blanchedalmond;
+}
+.main-heading {
+    font-size: 56px;
+}
+.chapter-heading {
+    font-size: 44px;
+}
+.sub-heading {
+    font-size: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI';
+}
+.txt {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
