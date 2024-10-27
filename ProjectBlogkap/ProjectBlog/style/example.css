@@ -1,0 +1,27 @@
+.nav-item {
+    display: block;
+}
+
+.nav-none-markers {
+    list-style-type: none;
+}
+
+.nav-square-markers {
+    list-style-type: square;
+}
+
+.nav-circle-markers {
+    list-style-type: circle;
+}
+
+.nav-numbers-with-zeros-markers {
+    list-style-type: decimal-leading-zero;
+}
+
+.nav-disc-markers {
+    list-style-type: disc;
+}
+
+.nav-custom1-markers {
+    list-style-type: "🎃";
+}

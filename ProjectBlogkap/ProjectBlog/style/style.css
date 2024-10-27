@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 .link {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    display: inline;
 }
 
 .align-right {
@@ -27,4 +28,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .align-center {
     text-align: center;
+}
+
+.nav-numbers-with-zeros-markers {
+    list-style-type: decimal-leading-zero;
 }
