@@ -7,10 +7,35 @@
 body {
     background-color: rgb(255, 248, 238);
     padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
 }
+
+/*body::before {
+    content: '';
+    position: fixed; /* Фиксируем на одном месте 
+    left: 0; right: 0; /* Вся ширин 
+    top: 0; bottom: 0; /* Вся высота 
+    z-index: -1; /* Фон ниже текста 
+    background: url('../img/okf.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    filter: grayscale(10px);
+} */
 
 ul {
     padding-left: 15px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
 .main-nav-item {
@@ -41,7 +66,13 @@ ul {
     background-color: rgb(255, 230, 194);
     border-radius: 20px;
     border: 4px dashed rgb(255, 158, 102);
-    margin: 0px
+    display: flex;
+    justify-content: left;
+    gap: 900px;
+}
+
+.main-footer-item {
+    gap: 100vw;
 }
 
 .main-heading {
@@ -70,6 +101,20 @@ ul {
     display: inline;
     margin-left: 5px;
 }
+
+
+.link:visited {
+    color: rgb(23, 131, 150);
+}
+
+.link:hover {
+    color: rgb(0, 255, 200);
+}
+
+.link:active {
+    color: rgb(69, 6, 185);
+}
+
 
 .align-right {
     text-align: right;
@@ -100,4 +145,8 @@ ul {
     float: right;
     margin-bottom: 10px;
     margin-right: 10px;
+}
+
+.secretz {
+    display: hidden;
 }
