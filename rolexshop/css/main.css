@@ -65,7 +65,14 @@ button {
     color: var(--text-color);
     font-family: var(--ff-base);
     font-weight: var(--fw-normal);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
+}
+
+.main {
+    flex: 1;
 }
 
 .header {
@@ -107,4 +114,28 @@ button {
 
 .btn-menu, .btn-close {
     display: none;
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--first-color);
+    text-align: center;
+}
+
+.clearfix::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.about {
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: var(--fw-bold);
 }
