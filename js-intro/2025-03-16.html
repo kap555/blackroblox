@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        let a, b, c, value
+        a = Number(prompt("Введи первое число"))
+        b = Number(prompt("Теперь второе число"))
+        value = prompt("А щас введи действие, что сделать с этими числами (+; -; *; /)")
+
+        if (value == "+") {
+            c = a + b
+        } else if (value == "-") {
+            c = a - b
+        } else if (value == "*") {
+            c = a * b
+        } else if (value == "/") {
+            if (b == 0) {
+                alert("Ну ты дурачок! На ноль нельзя делить!")
+            } else {
+                c = a / b
+            }
+        } else {
+            alert("Ну ты дурачок! Неправильно ввёл!")
+        }
+
+        alert(c)
+
+    </script>
+</head>
+<body>
+    <h3 align="center">Даров, тут ниче нету, если хочешь еще раз использовать калькулятор, нажми на ссылку внизу</h3>
+    <p align="center"><a href="">Сюда жми</a></p>
+</body>
+</html>
