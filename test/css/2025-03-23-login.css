@@ -16,6 +16,7 @@
     --color-light: #fcfcfc;
     --color-light-alt: #fff;
     --color-bright: #ffb566;
+    --color-warn: #ff0000;
 
     --link-color: var(--color-grey);
     --link-color-alt: var(--color-grey-alt);
@@ -42,6 +43,7 @@ html {
 a, input, textarea, select, button {
     font: inherit;
     color: inherit;
+    outline: none;
 }
 
 a {
@@ -110,11 +112,31 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: var(--transition-duration);
     text-decoration: none; 
     color: var(--link-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+        content: "";
+        border-top: 1px solid currentColor;
+        width: 0;
+        transition-duration: var(--transition-duration);
+    }
+
 }
 
 .link:hover {
     color: var(--link-color-alt);
-    text-decoration: underline; 
+    &::after {
+        width: 100%;
+    }
+}
+
+.link:focus {
+    color: var(--link-color-alt);
+    &::after {
+        width: 100%;
+    }
 }
 
 
@@ -131,6 +153,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:hover {
+    background-color: var(--btn-color); 
+    color: var(--btn-color-alt);
+}
+
+.btn:focus {
     background-color: var(--btn-color); 
     color: var(--btn-color-alt);
 }
@@ -175,8 +202,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-additions {
     text-align: center;
+
 }
 
 .input {
+    --padding: 0.4em;
+    --border-color: var(--color-grey-alt);
+    --shadow-color: transparent;
     width: 60%;
+    padding: calc(var(--padding) / 2) var(--padding);
+    border-radius: calc(var(--padding) * 1.5);
+    border: 2px solid var(--color-grey-alt);
+    transition-duration: var(--transition-duration);
+    box-shadow: 0 0 var(--padding) var(--shadow-color);
+    background-color: var(--color-light);
+
+
+    &:hover {
+        border-color: transparent;
+        --shadow-color: var(--color-grey-alt)
+    }
+
+    &:focus {
+        --shadow-color: var(--color-dark-alt)
+        border-color: transparent;
+    }
+
+    &::placeholder {
+        color: var(--color-grey-alt);
+    }
+
+}
+
+.label-required::after {
+    content: "*";
+    color: var(--color-warn);
+    font-size: 1.3em;
+}
+
+.footer-link {
+    display: inline-flex;
+}
+
+.form-addition-link {
+    display: inline-flex;
 }
