@@ -16,7 +16,12 @@ switch (sigma) {
         result = a * b
         break;
     case "/":
-        result = a / b
+        if (b == 0) {
+            alert("Ты же помнишь, да?\nЧто на ноль делить нельзя :)\n\n:skull:")
+            result = NaN
+        } else {
+            result = a / b
+        }
         break;
     default:
         alert("НЕИЗВЕСТНАЯ ОПЕРАЦИЯ НА ЯИЧКИ!!!")
