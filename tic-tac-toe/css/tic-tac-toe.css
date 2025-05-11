@@ -28,6 +28,10 @@ button {
     }
 }
 
+.svg {
+    display: block;
+}
+
 .btn--green {
     background-color: rgb(16, 197, 16);
 }
